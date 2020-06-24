@@ -7,4 +7,5 @@ public class User {
     private String  age1;
     private String  address;
     private String  addres1;
+    private  String surname;
 }
