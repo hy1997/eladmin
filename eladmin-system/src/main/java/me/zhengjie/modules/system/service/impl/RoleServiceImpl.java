@@ -60,6 +60,13 @@ public class RoleServiceImpl implements RoleService {
     private final RedisUtils redisUtils;
     private final UserRepository userRepository;
 
+    public RoleServiceImpl(RoleRepository roleRepository, RoleMapper roleMapper, RoleSmallMapper roleSmallMapper, RedisUtils redisUtils) {
+        this.roleRepository = roleRepository;
+        this.roleMapper = roleMapper;
+        this.roleSmallMapper = roleSmallMapper;
+        this.redisUtils = redisUtils;
+    }
+
     @Override
     public List<RoleDto> queryAll() {
         Sort sort = new Sort(Sort.Direction.ASC, "level");
